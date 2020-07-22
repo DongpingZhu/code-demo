@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!--数据库驱动包路径 -->
+    <classPathEntry location="D:\maven_repos\mysql\mysql-connector-java\8.0.19\mysql-connector-java-8.0.19.jar"/>
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+        <!--关闭注释 -->
+        <commentGenerator>
+            <property name="suppressAllComments" value="false"/>
+        </commentGenerator>
+        <!--数据库连接信息 -->
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://10.111.24.205:3306/data-annotation?characterEncoding=utf-8"
+                        userId="root"
+                        password="Analysis321!">
+        </jdbcConnection>
+        <!--生成的model 包路径 -->
+        <javaModelGenerator targetPackage="big.strong.disheng.user.model" targetProject="src/main/java">
+            <property name="enableSubPackages" value="ture"/>
+            <property name="trimStrings" value="false"/>
+        </javaModelGenerator>
+        <!--生成xml mapper文件 路径 -->
+        <sqlMapGenerator targetPackage="big.strong.disheng.user.dao" targetProject="src/main/java">
+            <property name="enableSubPackages" value="ture"/>
+        </sqlMapGenerator>
+
+        <!-- 生成的Dao接口 的包路径 -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="big.strong.disheng.user.dao" targetProject="src/main/java">
+            <property name="enableSubPackages" value="ture"/>
+        </javaClientGenerator>
+        <!--对应数据库表名 , 实体类名-->
+        <table tableName="ida_dataset" domainObjectName="IdaDataset" enableCountByExample="false"
+               enableSelectByExample="false" enableUpdateByExample="false" enableDeleteByExample="false">
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+
+        <!--<table tableName="ida_datasource" domainObjectName="IdaDatasource" enableCountByExample="false"
+               enableSelectByExample="false" enableUpdateByExample="false" enableDeleteByExample="false">
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+
+        <table tableName="ida_datatype" domainObjectName="IdaDatatype" enableCountByExample="false"
+               enableSelectByExample="false" enableUpdateByExample="false" enableDeleteByExample="false">
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+
+        <table tableName="ida_dataset_item" domainObjectName="IdaDatasetItem" enableCountByExample="false"
+                       enableSelectByExample="false" enableUpdateByExample="false" enableDeleteByExample="false">
+        <property name="useActualColumnNames" value="true"/>
+        </table>
+
+        <table tableName="ida_tag_item" domainObjectName="IdaTagItem" enableCountByExample="false"
+               enableSelectByExample="false" enableUpdateByExample="false" enableDeleteByExample="false">
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+        <table tableName="ida_tag" domainObjectName="IdaTag" enableCountByExample="false"
+               enableSelectByExample="false" enableUpdateByExample="false" enableDeleteByExample="false">
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+
+
+        <table tableName="ida_task" domainObjectName="IdaTask" enableCountByExample="false"
+               enableSelectByExample="false" enableUpdateByExample="false" enableDeleteByExample="false">
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+        <table tableName="ida_task_check_sample" domainObjectName="IdaTaskCheckSample" enableCountByExample="false"
+               enableSelectByExample="false" enableUpdateByExample="false" enableDeleteByExample="false">
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+        <table tableName="ida_task_item" domainObjectName="IdaTaskItem" enableCountByExample="false"
+               enableSelectByExample="false" enableUpdateByExample="false" enableDeleteByExample="false">
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+        <table tableName="ida_task_type" domainObjectName="IdaTaskType" enableCountByExample="false"
+               enableSelectByExample="false" enableUpdateByExample="false" enableDeleteByExample="false">
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+        <table tableName="ida_team" domainObjectName="IdaTeam" enableCountByExample="false"
+               enableSelectByExample="false" enableUpdateByExample="false" enableDeleteByExample="false">
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+        <table tableName="ida_team_member" domainObjectName="IdaTeamMember" enableCountByExample="false"
+               enableSelectByExample="false" enableUpdateByExample="false" enableDeleteByExample="false">
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+-->
+
+    </context>
+</generatorConfiguration>
